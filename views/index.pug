@@ -1,0 +1,35 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Home
+  link(href='/css/styleHome.css' rel='stylesheet')
+header.tit
+  h1 MyBlog
+  //- img(src='/images/bg5.jpeg' alt='aaa')
+  .nav
+    nav
+      a.active(href='/') Home
+      //-   if auth.role == "Admin"
+      a(href='/edit') Add post
+      br
+    //-p.user Hello #{user} in MyBlog
+
+.cont1
+  section
+    each post in posts
+      .post
+        .aaa
+          h2 #{post.titre}
+          h4 auteur : #{post.auteur}
+          h4 #{post.resume}
+          br
+          button.btn 
+            a.info(href='/detailpost/'+post.id) Details
+          button.btn 
+            a.info(href='/edit/' + post.id) Edit 
+            
+
+          form(action='/delete/'+post.id+'?_method=DELETE' method='POST' style='display:inline-block;')
+            button.btn(type='submit') Delete

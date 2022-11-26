@@ -1,0 +1,103 @@
+/* Add a black background color to the top navigation */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+
+}
+h1{
+    text-align: center;
+    font-size: 100px;
+    font-weight: 10px;
+    font-family: 'Times New Roman', Times, serif;
+     /* position: absolute;  */
+     z-index: 2000;
+     top: 50%;
+     left: 50%;
+     /* transform: translate(-50%, -50%); */
+     color: rgb(0, 0, 0);
+
+}
+
+.nav {
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .nav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .nav a.active {
+    background-color: #030303;
+    color: white;
+  }
+  .tit img{
+    /* background: url("../images/bg2.jpg"); */
+    width: 100vw;
+    height: 30vh;
+    position: relative;
+    opacity: 0.95;
+    margin-bottom: 0;
+
+
+  }
+  header{
+    position: relative;
+  }
+  header .tit{
+    margin-bottom: 0;
+  }
+
+  
+  
+  section{
+    position: relative;
+    max-width: 1200px;
+    width: 50%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0,0, 0, 0.1);
+    
+  }
+ 
+  table{
+      border-collapse: 2em; 
+  border-spacing: 1em;
+  }
+
+
+.prod{
+    margin-left: 25%;
+    margin-top: 5%;
+}
+.cont{
+    /*background-color: #034c19;*/
+    height: 600px;
+    background: linear-gradient(120deg,#ffffff,#ffffff);
+
+}
+.image_{
+  height: 180px;
+}
+
+
+  

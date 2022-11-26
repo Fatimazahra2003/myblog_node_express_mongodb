@@ -1,0 +1,52 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Edit post
+  link(href='/css/styleaddP.css' rel='stylesheet')
+header.tit
+  h1 MyBlog
+  //- img(src='/images/bg5.jpeg' alt='aaa')
+.nav
+  nav
+    a(href='/') Home
+    a.active(href='/edit') Add Post
+
+form.container(action=(post.titre?'/update/'+post.id+'?_method=PUT':'/store') method='POST')
+  .form.first
+    .details
+      span.title #{post.titre?'Edit':'Add'}
+      .fields
+        .input
+          table
+            tr
+              td
+                label Titre:
+              td
+                input(type='text' placeholder='Entrer le titre' name='titre' required='' value=(post.titre?post.titre:''))
+                br
+            tr    
+              td
+                label Auteur:
+              td
+              
+                input(type='text' placeholder="Entrer le l'auteur" name='auteur' required='' value=(post.auteur?post.auteur:''))
+                br
+            tr    
+              td
+                label résumé:
+              td
+              
+                input(type='textarea' placeholder='Entrer le résumé' name='resume' required='' value=(post.resume?post.resume:''))
+                br
+            tr
+              td
+                label Contenu:
+              td
+                textarea#story( rows='5' cols='33' name='contenu' required='') 
+                  #{post.contenu?post.contenu:''}
+           
+            tr
+              td.b(colspan='4')
+                button#buttonAdd.button(type='submit') #{post.titre?'Edit':'Add'}
